@@ -5,14 +5,15 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
-        navigation: './src/navigation.js'
+        navigation: './src/navigation.js',
+        home: './src/home.js'
     },
     devServer: {
         static: './dist'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Dragon House',
+            title: 'DragonHub',
         }),
     ],
     output: {
@@ -28,7 +29,14 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]',
+                },
+            },
         ]
     }
 }

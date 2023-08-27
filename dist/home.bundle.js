@@ -7,7 +7,17 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkrestaurant_page"] = self["webpackChunkrestaurant_page"] || []).push([["navigation"],{
+(self["webpackChunkrestaurant_page"] = self["webpackChunkrestaurant_page"] || []).push([["home"],{
+
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ home)\n/* harmony export */ });\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ \"./src/navigation.js\");\n\r\n\r\nfunction home() {\r\n\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+
+/***/ }),
 
 /***/ "./src/navigation.js":
 /*!***************************!*\
@@ -32,6 +42,6 @@ eval("module.exports = __webpack_require__.p + \"images/restaurant-logo.png\";\n
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./src/navigation.js"));
+/******/ var __webpack_exports__ = (__webpack_exec__("./src/home.js"));
 /******/ }
 ]);
