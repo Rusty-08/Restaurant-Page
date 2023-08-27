@@ -6,21 +6,21 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkrestaurant_page"] = self["webpackChunkrestaurant_page"] || []).push([["main"],{
+(self["webpackChunkrestaurant_page"] = self["webpackChunkrestaurant_page"] || []).push([["navigation"],{
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/navigation.js":
+/*!***************************!*\
+  !*** ./src/navigation.js ***!
+  \***************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("\n\n//# sourceURL=webpack://restaurant-page/./src/navigation.js?");
 
 /***/ })
 
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./src/index.js"));
+/******/ var __webpack_exports__ = (__webpack_exec__("./src/navigation.js"));
 /******/ }
 ]);
