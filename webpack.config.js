@@ -6,7 +6,10 @@ module.exports = {
     entry: {
         index: './src/index.js',
         navigation: './src/navigation.js',
-        home: './src/home.js'
+        home: './src/home.js',
+        product: './src/product.js',
+        about: './src/about.js',
+        contact: './src/contact.js'
     },
     devServer: {
         static: './dist'
