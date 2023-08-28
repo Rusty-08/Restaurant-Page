@@ -29,15 +29,15 @@ document.body.appendChild(App())
 
 setActiveLink()
 
-// * Display active page when navlink is clicked
-
-const displayActivePage = () => {
-
-}
-
 // * Set Home section as active page onload
 
 window.onload = () => {
     const links = document.querySelector('.nav-item:first-child .nav-link')
+    const sections = document.querySelectorAll(['#Home', '#About', '#Product', '#Contact'])
+
+    sections.forEach(section => section.classList.add('d-none'))
+    document.getElementById('Home')
+        .classList.remove('d-none')
+
     links.classList.add('active')
 }

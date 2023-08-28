@@ -2,10 +2,18 @@ import logo from './img/restaurant-logo.png';
 
 export function setActiveLink() {
     const navlink = document.querySelectorAll('.nav-link')
+    const sections = document.querySelectorAll(['#Home', '#About', '#Product', '#Contact'])
 
     navlink.forEach(link => {
         link.addEventListener('click', () => {
             navlink.forEach(link => link.classList.remove('active'))
+            sections.forEach(section => section.classList.add('d-none'))
+
+            const linkHref = link.getAttribute('href')
+            const activeLink = linkHref.toString().split('').splice(1, linkHref.length - 1).join('')
+
+            document.getElementById(`${activeLink}`)
+                .classList.remove('d-none')
 
             link.classList.add('active')
         })

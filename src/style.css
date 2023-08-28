@@ -46,6 +46,14 @@
     color: #EADBC8 !important;
 }
 
+.nav-item:hover .nav-link {
+    opacity: 0.7;
+}
+
+.nav-item:hover .nav-link.active {
+    opacity: 1;
+}
+
 .nav-link.active::after,
 .nav-item:hover:not(.active)::after {
     content: '';
