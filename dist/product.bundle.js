@@ -1,3 +1,4 @@
+"use strict";
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
  * This devtool is neither made for production nor for readable output files.
@@ -12,9 +13,9 @@
 /*!************************!*\
   !*** ./src/product.js ***!
   \************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("\n\n//# sourceURL=webpack://restaurant-page/./src/product.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ product)\n/* harmony export */ });\nfunction product() {\r\n    const product = document.createElement('section');\r\n\r\n    product.setAttribute('id', 'Product')\r\n    product.className = 'd-flex w-100 h-100 justify-content-center align-items-center'\r\n    product.textContent = 'PRODUCT'\r\n\r\n    return product\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/product.js?");
 
 /***/ })
 

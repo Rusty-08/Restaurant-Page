@@ -83,5 +83,56 @@
 #Product,
 #About,
 #Contact {
-    background-color: #F8F0E5;
+    background-color: rgba(248, 240, 229, 0.7);
+}
+
+#Home {
+    padding-top: 5rem;
+}
+
+.home-image {
+    height: 80%;
+}
+
+.home-title h1 {
+    color: #5a2210;
+    font-size: 4rem;
+    padding: 0 1rem 0.2rem 1rem;
+    border-bottom: 1px solid rgba(90, 34, 16, 0.2);
+}
+
+.home-title span {
+    font-size: 1rem;
+    color: #69473b;;
+    letter-spacing: 1px;
+}
+
+.home-buttons a {
+    text-decoration: none;
+    padding: 0.4rem 1.5rem;
+    color: #6d1c15 !important;
+    border-radius: 0.5rem;
+    border: 1px solid #6d1c15;
+    background-color: transparent;
+    transition: all 0.175s ease-in-out;
+}
+
+.home-buttons a:last-child {
+    background-color: #6d1c15;
+    color: rgb(248, 240, 229) !important;
+}
+
+.home-buttons a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.home-accounts i {
+    color: rgba(109, 28, 21, 0.7);
+    transition: all 0.175s ease-in-out;
+}
+
+.home-accounts i:hover {
+    color: rgba(109, 28, 21, 1);
+    cursor: pointer;
 }

@@ -1,7 +1,8 @@
 import logo from './img/restaurant-logo.png';
 
 export function setActiveLink() {
-    const navlink = document.querySelectorAll('.nav-link')
+    const project = document.querySelector('.nav-item:nth-child(2) .nav-link');
+    const navlink = document.querySelectorAll(['.nav-link', '.product-btn'])
     const sections = document.querySelectorAll(['#Home', '#About', '#Product', '#Contact'])
 
     navlink.forEach(link => {
@@ -16,6 +17,12 @@ export function setActiveLink() {
                 .classList.remove('d-none')
 
             link.classList.add('active')
+
+            const projectBtn = [...navlink].pop().getAttribute('href')
+
+            if (linkHref == projectBtn) {
+                project.classList.add('active')
+            }
         })
     })
 }

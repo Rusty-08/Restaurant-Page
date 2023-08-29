@@ -1,5 +1,6 @@
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import navigation from './navigation';
 import { setActiveLink } from './navigation';

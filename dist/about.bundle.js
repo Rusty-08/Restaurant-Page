@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ about)\n/* harmony export */ });\nfunction about() {\r\n    return displayAbout()\r\n}\r\n\r\nfunction displayAbout() {\r\n    const home = document.createElement('section');\r\n    home.setAttribute('id', 'About')\r\n\r\n    home.className = 'd-flex w-100 h-100 justify-content-center align-items-center'\r\n\r\n    home.textContent = 'ABOUT'\r\n\r\n    return home\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/about.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ about)\n/* harmony export */ });\nfunction about() {\r\n    const about = document.createElement('section');\r\n\r\n    about.setAttribute('id', 'About')\r\n    about.className = 'd-flex w-100 h-100 justify-content-center align-items-center'\r\n    about.textContent = 'ABOUT'\r\n\r\n    return about\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/about.js?");
 
 /***/ })
 
