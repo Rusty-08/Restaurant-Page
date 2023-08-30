@@ -1,9 +1,9 @@
-import logo from './img/restaurant-logo.png';
+import logo from './img/rottea-logo.png';
 
 export function setActiveLink() {
     const project = document.querySelector('.nav-item:nth-child(2) .nav-link');
     const navlink = document.querySelectorAll(['.nav-link', '.product-btn'])
-    const sections = document.querySelectorAll(['#Home', '#About', '#Product', '#Contact'])
+    const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
     navlink.forEach(link => {
         link.addEventListener('click', () => {
@@ -38,7 +38,7 @@ export default function navigation() {
     ul.className = 'nav gap-4'
 
     ul.appendChild(createNav('Home'))
-    ul.appendChild(createNav('Product'))
+    ul.appendChild(createNav('Products'))
     ul.appendChild(createNav('About'))
     ul.appendChild(createNav('Contact'))
 

@@ -7,3 +7,4 @@
 
 # Ignore directories
 /node_modules/
+/venv/

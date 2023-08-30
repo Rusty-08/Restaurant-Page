@@ -19,7 +19,7 @@
 }
 
 .logo {
-    height: 2.5rem;
+    height: 3rem;
     position: absolute;
     left: 1rem;
 }
@@ -90,29 +90,40 @@
     padding-top: 5rem;
 }
 
-.home-image {
+.image-container {
     height: 80%;
+    width: auto;
+    position: relative;
+}
+
+.home-image {
+    height: 100%;
+}
+
+.home-product {
+    height: 50%;
+    position: absolute;
+    mix-blend-mode :multiply;
 }
 
 .home-title h1 {
     color: #5a2210;
     font-size: 4rem;
-    padding: 0 1rem 0.2rem 1rem;
     border-bottom: 1px solid rgba(90, 34, 16, 0.2);
 }
 
 .home-title span {
-    font-size: 1rem;
-    color: #69473b;;
+    font-size: 0.9rem;
+    color: rgb(109, 28, 21);
     letter-spacing: 1px;
 }
 
 .home-buttons a {
     text-decoration: none;
     padding: 0.4rem 1.5rem;
-    color: #6d1c15 !important;
+    color: rgba(109, 28, 21, 0.7) !important;
     border-radius: 0.5rem;
-    border: 1px solid #6d1c15;
+    border: 1px solid rgba(109, 28, 21, 0.7);
     background-color: transparent;
     transition: all 0.175s ease-in-out;
 }
@@ -120,11 +131,20 @@
 .home-buttons a:last-child {
     background-color: #6d1c15;
     color: rgb(248, 240, 229) !important;
+    border-color: transparent !important; 
 }
 
 .home-buttons a:hover {
-    opacity: 0.8;
     cursor: pointer;
+}
+
+.home-buttons a:last-child:hover {
+    background-color: #3e0a05;
+}
+
+.home-buttons a:first-child:hover {
+    border-color: rgba(109, 28, 21, 1);
+    color: rgba(109, 28, 21, 1) !important;
 }
 
 .home-accounts i {

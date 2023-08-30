@@ -1,4 +1,5 @@
 import homeImage from './img/restaurant-bg.png';
+import productSamples from './img/poop.png';
 
 const addTitle = () => {
     const container = document.createElement('div')
@@ -6,8 +7,8 @@ const addTitle = () => {
     const subTitle = document.createElement('span')
 
     container.className = 'home-title text-center'
-    title.textContent = 'Cup De Nudle'
-    subTitle.textContent = 'Most Elegant place to eat'
+    title.textContent = 'Rottea'
+    subTitle.textContent = 'The famous street food of Malaysia and Singapore'
 
     container.appendChild(title)
     container.appendChild(subTitle)
@@ -23,7 +24,7 @@ const addButtons = () => {
     container.className = 'home-buttons d-flex gap-2 mt-3'
     productLink.className = 'product-btn'
     productLink.textContent = 'Our products'
-    productLink.setAttribute('href', '#Product')
+    productLink.setAttribute('href', '#Products')
 
     orderLink.textContent = 'Order now!'
 
@@ -54,7 +55,9 @@ const addAccounts = () => {
 export default function home() {
     const home = document.createElement('section')
     const homeDesc = document.createElement('div')
+    const homeProduct = document.createElement('div')
     const homePicture = document.createElement('img')
+    const bestProducts = document.createElement('img')
 
     home.setAttribute('id', 'Home')
     homeDesc.className = 'homeDesc d-flex justify-content-center align-items-center flex-column gap-5'
@@ -68,8 +71,16 @@ export default function home() {
     homePicture.className = 'home-image'
     homePicture.src = homeImage;
 
+    bestProducts.setAttribute('alt', 'picture')
+    bestProducts.className = 'home-product'
+    bestProducts.src = productSamples;
+
+    homeProduct.className = 'image-container d-flex justify-content-center align-items-center'
+    homeProduct.appendChild(homePicture)
+    homeProduct.appendChild(bestProducts)
+
     home.appendChild(homeDesc)
-    home.appendChild(homePicture)
+    home.appendChild(homeProduct)
 
     return home
 }

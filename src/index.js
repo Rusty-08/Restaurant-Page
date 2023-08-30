@@ -34,7 +34,7 @@ setActiveLink()
 
 window.onload = () => {
     const links = document.querySelector('.nav-item:first-child .nav-link')
-    const sections = document.querySelectorAll(['#Home', '#About', '#Product', '#Contact'])
+    const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
     sections.forEach(section => section.classList.add('d-none'))
     document.getElementById('Home')
