@@ -1,5 +1,8 @@
 import homeImage from './img/restaurant-bg.png';
-import productSamples from './img/poop.png';
+import productSample1 from './img/home-picture.png';
+import productSample2 from './img/product-2.png';
+import productSample3 from './img/product-3.png';
+import ingredient from './img/ingredient.png';
 
 const addTitle = () => {
     const container = document.createElement('div')
@@ -56,8 +59,6 @@ export default function home() {
     const home = document.createElement('section')
     const homeDesc = document.createElement('div')
     const homeProduct = document.createElement('div')
-    const homePicture = document.createElement('img')
-    const bestProducts = document.createElement('img')
 
     home.setAttribute('id', 'Home')
     homeDesc.className = 'homeDesc d-flex justify-content-center align-items-center flex-column gap-5'
@@ -67,20 +68,25 @@ export default function home() {
     homeDesc.appendChild(addButtons())
     homeDesc.appendChild(addAccounts())
 
-    homePicture.setAttribute('alt', 'picture')
-    homePicture.className = 'home-image'
-    homePicture.src = homeImage;
-
-    bestProducts.setAttribute('alt', 'picture')
-    bestProducts.className = 'home-product'
-    bestProducts.src = productSamples;
-
     homeProduct.className = 'image-container d-flex justify-content-center align-items-center'
-    homeProduct.appendChild(homePicture)
-    homeProduct.appendChild(bestProducts)
+    homeProduct.appendChild(createImage('home-image', homeImage))
+    homeProduct.appendChild(createImage('home-product-1 shadow-lg', productSample1))
+    homeProduct.appendChild(createImage('home-product-2', productSample2))
+    homeProduct.appendChild(createImage('home-product-3', productSample3))
+    homeProduct.appendChild(createImage('product-ingredient', ingredient))
 
     home.appendChild(homeDesc)
     home.appendChild(homeProduct)
 
     return home
+}
+
+const createImage = (className, image) => {
+    const product = document.createElement('img')
+
+    product.setAttribute('alt', 'picture')
+    product.className = className
+    product.src = image;
+
+    return product
 }

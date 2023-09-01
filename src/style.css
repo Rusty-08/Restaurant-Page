@@ -80,7 +80,7 @@
 }
 
 #Home,
-#Product,
+#Products,
 #About,
 #Contact {
     background-color: rgba(248, 240, 229, 0.7);
@@ -91,23 +91,50 @@
 }
 
 .image-container {
-    height: 80%;
-    width: auto;
+    height: 100%;
     position: relative;
 }
 
 .home-image {
-    height: 100%;
+    height: 80% !important;
+    display: none;
 }
 
-.home-product {
-    height: 50%;
+.home-product-1 {
+    height: 80%;
+    z-index: 2;
+}
+
+.product-ingredient {
+    z-index: 5;
+}
+
+.product-ingredient,
+.home-product-3,
+.home-product-2 {
+    height: 30%;
     position: absolute;
-    mix-blend-mode :multiply;
+    bottom: 30%;
+    right: 15%;
+    display: none;
+}
+
+.home-product-3 {
+    left: 20%;
+    height: 15%;
+    bottom: 34%;
+    display: none;
+}
+
+.home-product-2 {
+    left: 0;
+    bottom: 17%;
+    left: 10%;
+    height: 65%;
 }
 
 .home-title h1 {
-    color: #5a2210;
+    color: #6d1c15;
     font-size: 4rem;
     border-bottom: 1px solid rgba(90, 34, 16, 0.2);
 }
