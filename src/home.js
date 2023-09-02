@@ -70,7 +70,7 @@ export default function home() {
 
     homeProduct.className = 'image-container d-flex justify-content-center align-items-center'
     homeProduct.appendChild(createImage('home-image', homeImage))
-    homeProduct.appendChild(createImage('home-product-1 shadow-lg', productSample1))
+    homeProduct.appendChild(createImage('home-product-1', productSample1))
     homeProduct.appendChild(createImage('home-product-2', productSample2))
     homeProduct.appendChild(createImage('home-product-3', productSample3))
     homeProduct.appendChild(createImage('product-ingredient', ingredient))

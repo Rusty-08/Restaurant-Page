@@ -30,6 +30,33 @@ document.body.appendChild(App())
 
 setActiveLink()
 
+// * Add order number onclick fucntionality
+
+function orderNumber() {
+    const orderNumberElement = document.querySelector('.order-number p')
+    const minus = document.querySelector('.minus')
+    const plus = document.querySelector('.plus')
+
+    let number = 1
+
+    minus.addEventListener('click', () => {
+        if (number > 0) {
+            number--
+        }
+        orderNumberElement.textContent = number
+    })
+
+    plus.addEventListener('click', () => {
+        number++
+        orderNumberElement.textContent = number
+    })
+
+    orderNumberElement.textContent = number
+}
+
+orderNumber()
+
+
 // * Set Home section as active page onload
 
 window.onload = () => {
@@ -37,7 +64,7 @@ window.onload = () => {
     const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
     sections.forEach(section => section.classList.add('d-none'))
-    document.getElementById('Home')
+    document.getElementById('Products')
         .classList.remove('d-none')
 
     links.classList.add('active')
