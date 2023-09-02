@@ -7,7 +7,7 @@ const addProductsHeader = () => {
     const header = document.createElement('h1');
     const desc = document.createElement('p');
 
-    title.className = 'products-header d-flex align-items-center text-center flex-column h-auto mt-5';
+    title.className = 'products-header d-flex align-items-center text-center flex-column h-auto mt-4';
     header.textContent = 'HEALTHY ROTI & TEA'
     desc.innerHTML = 'Come and try our deliciously balanced combination of Roti & Tea.'
 
@@ -31,17 +31,17 @@ const createProductCard = (pic, title, description, itemPrice) => {
     const plusBtn = document.createElement('button')
     const price = document.createElement('p')
 
-    item.className = 'product-card card p-3'
+    item.className = 'product-card card p-3 shadow-lg'
 
     image.setAttribute('alt', 'picture')
     image.src = pic
 
     name.className = 'food-name fw-bold'
     name.textContent = title
-    desc.className = 'text-secondary text-center'
+    desc.className = 'text-secondary text-center fw-bold opacity-50'
     desc.textContent = description
 
-    buyButton.className = 'btn btn-primary px-4'
+    buyButton.className = 'buy-btn btn px-4 fw-bold'
     buyButton.innerHTML = 'Order <i class="fa-solid fa-plus"></i>'
 
     price.className = 'price m-0 shadow-lg d-flex justify-content-center align-items-center'
@@ -79,14 +79,28 @@ export default function product() {
     const productBody = document.createElement('div')
 
     product.setAttribute('id', 'Products')
-    product.className = 'd-flex w-100 min-vh-100 justify-content-center flex-column'
+    product.className = 'd-flex w-100 min-vh-100 justify-content-center align-items-center flex-column'
 
     product.appendChild(addProductsHeader())
 
     // * Adding item to the menu
-    productBody.className = 'product-body px-5 my-3'
+    productBody.className = 'product-body my-4 d-flex justify-content-center align-items-center'
     productBody.appendChild(createProductCard(
         item1,
+        'Plain',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        '65.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item2,
+        'Plain',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        '65.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item3,
         'Plain',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         '65.00'

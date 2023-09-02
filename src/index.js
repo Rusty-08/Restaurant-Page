@@ -33,25 +33,42 @@ setActiveLink()
 // * Add order number onclick fucntionality
 
 function orderNumber() {
-    const orderNumberElement = document.querySelector('.order-number p')
-    const minus = document.querySelector('.minus')
-    const plus = document.querySelector('.plus')
+    const orderNumberElement = document.querySelectorAll('.order-number p')
+    const minus = document.querySelectorAll('.minus')
+    const plus = document.querySelectorAll('.plus')
 
-    let number = 1
+    let number = 0
+    let map = new Map()
 
-    minus.addEventListener('click', () => {
-        if (number > 0) {
-            number--
-        }
-        orderNumberElement.textContent = number
+    orderNumberElement.forEach(num => num.textContent = number)
+
+    minus.forEach(button => {
+        button.addEventListener('click', () => {
+            if (number > 0) {
+                let orderNumber = orderNumberElement[[...minus].indexOf(button)]
+                orderNumber.textContent = number--
+
+                if (!map.has([...minus].indexOf(button))) {
+                    number = 0
+                    orderNumber.textContent = number--
+                }
+            }
+            map.set([...minus].indexOf(button))
+        })
     })
 
-    plus.addEventListener('click', () => {
-        number++
-        orderNumberElement.textContent = number
-    })
+    plus.forEach(button => {
+        button.addEventListener('click', () => {
+            let orderNumber = orderNumberElement[[...plus].indexOf(button)]
+            orderNumber.textContent = number++
 
-    orderNumberElement.textContent = number
+            if (!map.has([...plus].indexOf(button))) {
+                number = 0
+                orderNumber.textContent = number++
+            }
+            map.set([...plus].indexOf(button))
+        })
+    })
 }
 
 orderNumber()

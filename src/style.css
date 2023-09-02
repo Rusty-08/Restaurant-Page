@@ -198,17 +198,32 @@
 
 .products-header p {
     color: rgb(174, 145, 143);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .product-body {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+    gap: 1.5rem;
+    width: 90%;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 1rem;
+}
+
+.product-body::before {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    width: 10%;
+    border-top: 7px dotted rgba(109, 28, 21, 0.1);
+    border-bottom: 7px dotted rgba(109, 28, 21, 0.1);
+    padding: 3px 0;
 }
 
 .product-card {
+    width: 20rem;
+    height: auto;
     position: relative;
     background-color: rgba(174, 145, 143, 0.1) !important;
     border: none !important;
@@ -227,7 +242,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: whitesmoke;
-    background-color: rgb(109, 28, 21);
+    background-color: rgb(177, 138, 39);
     border-radius: 1.5rem 0 0 1.5rem;
 }
 
@@ -238,7 +253,7 @@
     border-left-width: 0rem;
     top: 3rem;
     right: -0.5rem;
-    border-top-color: rgba(109, 28, 21, 0.8);
+    border-top-color: rgba(177, 138, 39, 0.7);
 }
 
 .product-card .food-name {
@@ -248,6 +263,12 @@
 .order-number {
     width: 6rem;
     position: relative;
+    border: 2px dotted rgba(109, 28, 21, 0.2);
+    border-radius: 5px;
+}
+
+.order-number:hover {
+    border-color: rgba(109, 28, 21, 0.5);;
 }
 
 .order-number p {
@@ -270,4 +291,14 @@
 .minus:active {
     color: rgb(109, 28, 21) !important;
     border-color: transparent !important;
+}
+
+.buy-btn {
+    background-color: rgb(109, 28, 21) !important;
+    color: whitesmoke !important;
+    transition: all 0.175s ease-in-out;
+}
+
+.buy-btn:hover, .buy-btn:active {
+    background-color: rgb(74, 14, 8) !important;
 }
