@@ -6,11 +6,13 @@ import navigation from './navigation';
 import { setActiveLink } from './navigation';
 
 import home from './home';
+import { addFooter } from './home';
+
 import product from './product';
 import about from './about';
 import contact from './contact';
 
-function App() {
+const App = () => {
     const app = document.createElement('main')
 
     app.setAttribute('id', 'main-body')
@@ -20,6 +22,7 @@ function App() {
     app.appendChild(product())
     app.appendChild(about())
     app.appendChild(contact())
+    app.appendChild(addFooter())
 
     return app
 }
@@ -32,7 +35,7 @@ setActiveLink()
 
 // * Add order number onclick fucntionality
 
-function orderNumber() {
+const orderNumber = () => {
     const orderNumberElements = document.querySelectorAll('.order-number p')
     const minusButtons = document.querySelectorAll('.minus')
     const plusButtons = document.querySelectorAll('.plus')
@@ -60,7 +63,6 @@ function orderNumber() {
 
 orderNumber()
 
-
 // * Set Home section as active page onload
 
 window.onload = () => {
@@ -68,7 +70,7 @@ window.onload = () => {
     const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
     sections.forEach(section => section.classList.add('d-none'))
-    document.getElementById('Products')
+    document.getElementById('Home')
         .classList.remove('d-none')
 
     links.classList.add('active')

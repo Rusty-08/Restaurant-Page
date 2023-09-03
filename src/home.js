@@ -1,8 +1,6 @@
-import homeImage from './img/restaurant-bg.png';
-import productSample1 from './img/home-picture.png';
-import productSample2 from './img/product-2.png';
-import productSample3 from './img/product-3.png';
-import ingredient from './img/ingredient.png';
+import productSample1 from './img/home-pic-1.jpg';
+import productSample2 from './img/home-pic-3.jpg';
+import productSample3 from './img/home-pic-2.jpg';
 
 const addTitle = () => {
     const container = document.createElement('div')
@@ -55,10 +53,34 @@ const addAccounts = () => {
     return container
 }
 
+// * Add footer to each section
+
+export function addFooter() {
+    const footer = document.createElement('div')
+    const project = document.createElement('p')
+    const wrapper = document.createElement('div')
+    const year = document.createElement('p')
+    const owner = document.createElement('a')
+
+    project.textContent = 'The Odin Project - Rusty Gunao'
+    year.innerHTML = new Date().getFullYear() + ' <i class="fa-regular fa-copyright"></i>'
+    owner.setAttribute('href', 'https://github.com/Rusty-08/Restaurant-Page')
+    owner.setAttribute('target', '__blank')
+    owner.innerHTML = 'Rusty-08 <i class="fa-brands fa-github"></i>'
+
+    footer.className = 'footer shadow-lg w-100 px-5 d-flex justify-content-between align-items-center'
+    footer.appendChild(owner)
+    footer.appendChild(project)
+    footer.appendChild(year)
+
+    return footer
+}
+
 export default function home() {
     const home = document.createElement('section')
     const homeDesc = document.createElement('div')
     const homeProduct = document.createElement('div')
+    const pics = document.createElement('div')
 
     home.setAttribute('id', 'Home')
     homeDesc.className = 'homeDesc d-flex justify-content-center align-items-center flex-column gap-5'
@@ -68,12 +90,13 @@ export default function home() {
     homeDesc.appendChild(addButtons())
     homeDesc.appendChild(addAccounts())
 
-    homeProduct.className = 'image-container d-flex justify-content-center align-items-center'
-    homeProduct.appendChild(createImage('home-image', homeImage))
+    pics.className = 'd-flex flex-column gap-2'
+    pics.appendChild(createImage('home-product-2', productSample2))
+    pics.appendChild(createImage('home-product-3', productSample3))
+
+    homeProduct.className = 'image-container d-flex justify-content-center align-items-center gap-2 shadow-lg'
+    homeProduct.appendChild(pics)
     homeProduct.appendChild(createImage('home-product-1', productSample1))
-    homeProduct.appendChild(createImage('home-product-2', productSample2))
-    homeProduct.appendChild(createImage('home-product-3', productSample3))
-    homeProduct.appendChild(createImage('product-ingredient', ingredient))
 
     home.appendChild(homeDesc)
     home.appendChild(homeProduct)

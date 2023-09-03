@@ -10,7 +10,7 @@ const addProductsHeader = () => {
     const header = document.createElement('h1');
     const desc = document.createElement('p');
 
-    title.className = 'products-header d-flex align-items-center text-center flex-column h-auto mt-4';
+    title.className = 'products-header d-flex align-items-center text-center flex-column h-auto mt-5'
     header.textContent = 'HEALTHY ROTI & TEA'
     desc.innerHTML = 'Come and try our deliciously balanced combination of Roti & Tea.'
 
@@ -87,7 +87,7 @@ export default function product() {
     product.appendChild(addProductsHeader())
 
     // * Adding item to the menu
-    productBody.className = 'product-body my-4 d-flex justify-content-center align-items-center'
+    productBody.className = 'product-body mt-4 mb-5 d-flex justify-content-center align-items-center'
     productBody.appendChild(createProductCard(
         item1,
         'Laccha Paratha',

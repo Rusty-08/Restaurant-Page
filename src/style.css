@@ -88,50 +88,25 @@
     padding-top: 5rem;
 }
 
-.image-container {
-    position: relative;
-    height: 100%;
+.homeDesc {
+    margin: 0 2rem 0 4rem
 }
 
-.home-image {
-    height: 80% !important;
+.image-container {
+    height: autp;
+    position: relative;
+    margin-bottom: 1rem;
+    background-color: rgba(174, 145, 143, 0.1);
+    padding: 0.5rem;
 }
 
 .home-product-1 {
-    height: 62%;
-    border-radius: 50%;
-    z-index: 2;
-    position: absolute;
-    margin-top: 3px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    height: 20.5rem;
 }
 
-.product-ingredient {
-    z-index: 5;
-}
-
-.product-ingredient,
-.home-product-3,
-.home-product-2 {
-    height: 30%;
-    position: absolute;
-    bottom: 30%;
-    right: 15%;
-    display: none;
-}
-
+.home-product-2,
 .home-product-3 {
-    left: 20%;
-    height: 15%;
-    bottom: 34%;
-    display: none;
-}
-
-.home-product-2 {
-    left: 0;
-    bottom: 17%;
-    left: 10%;
-    height: 65%;
+    height: 10rem;
 }
 
 .home-title h1 {
@@ -139,7 +114,6 @@
     font-size: 4rem;
     font-weight: bold;
     border-bottom: 1px solid rgba(90, 34, 16, 0.2);
-
 }
 
 .home-title span {
@@ -223,7 +197,7 @@
 
 .product-card {
     width: 20rem;
-    height: auto;
+    height: 334px !important;
     position: relative;
     background-color: rgba(174, 145, 143, 0.1) !important;
     border: none !important;
@@ -267,7 +241,7 @@
 .order-number {
     width: 6rem;
     position: relative;
-    border: 2px dotted rgba(109, 28, 21, 0.2);
+    border: 2px dotted rgba(109, 28, 21, 0.1);
     border-radius: 5px;
     height: 2.3rem;
 }
@@ -307,4 +281,38 @@
 .buy-btn:hover, .buy-btn:active {
     background-color: rgba(109, 28, 21, 0.3) !important;
     border-color: transparent !important;
+}
+
+
+
+
+
+
+
+.footer {
+    height: 3rem;
+    background-color: rgb(237, 229, 219);
+}
+
+.footer p, .footer i, .footer a {
+    margin: 0 !important;
+    color: rgb(109, 28, 21);
+    text-decoration: none;
+}
+
+.footer p, .footer a {
+    font-weight: bold;
+}
+
+.footer i {
+    font-size: 0.8rem;
+}
+
+.footer a {
+    padding: 0.15rem 1rem;
+    border-radius: 5px;
+}
+
+.footer a:hover {
+    background-color: rgb(209, 195, 176);
 }
