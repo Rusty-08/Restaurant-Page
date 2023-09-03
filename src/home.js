@@ -10,8 +10,8 @@ const addTitle = () => {
     const subTitle = document.createElement('span')
 
     container.className = 'home-title text-center'
-    title.textContent = 'Rottea'
-    subTitle.textContent = 'The famous street food of Malaysia and Singapore'
+    title.textContent = 'Roti Hub'
+    subTitle.textContent = 'Griddled, unleavened bread in Indian cuisine.'
 
     container.appendChild(title)
     container.appendChild(subTitle)

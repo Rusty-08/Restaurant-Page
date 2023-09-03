@@ -233,6 +233,10 @@
     height: 7rem;
 }
 
+.product-card .food-desc {
+    color: rgb(174, 145, 143) ;
+}
+
 .product-card .price {
     position: absolute;
     top: 0.5rem;
@@ -265,6 +269,7 @@
     position: relative;
     border: 2px dotted rgba(109, 28, 21, 0.2);
     border-radius: 5px;
+    height: 2.3rem;
 }
 
 .order-number:hover {
@@ -294,11 +299,12 @@
 }
 
 .buy-btn {
-    background-color: rgb(109, 28, 21) !important;
-    color: whitesmoke !important;
-    transition: all 0.175s ease-in-out;
+    background-color: rgba(109, 28, 21, 0.1) !important;
+    color: rgb(109, 28, 21) !important;
+    transition: all 0.275s ease-in-out;
 }
 
 .buy-btn:hover, .buy-btn:active {
-    background-color: rgb(74, 14, 8) !important;
+    background-color: rgba(109, 28, 21, 0.3) !important;
+    border-color: transparent !important;
 }

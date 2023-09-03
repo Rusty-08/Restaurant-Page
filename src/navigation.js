@@ -1,4 +1,4 @@
-import logo from './img/rottea-logo.png';
+import logo from './img/new-logo.png';
 
 export function setActiveLink() {
     const project = document.querySelector('.nav-item:nth-child(2) .nav-link');

@@ -1,6 +1,9 @@
-import item1 from './img/product-1.png';
-import item2 from './img/product-2.png';
-import item3 from './img/product-3.png';
+import item1 from './img/Laccha.png';
+import item2 from './img/Makki.png';
+import item3 from './img/product-1.png';
+import item4 from './img/Tandoori.png';
+import item5 from './img/Alo.png';
+import item6 from './img/Roghni.png';
 
 const addProductsHeader = () => {
     const title = document.createElement('div');
@@ -38,11 +41,11 @@ const createProductCard = (pic, title, description, itemPrice) => {
 
     name.className = 'food-name fw-bold'
     name.textContent = title
-    desc.className = 'text-secondary text-center fw-bold opacity-50'
+    desc.className = 'food-desc text-center fw-bold'
     desc.textContent = description
 
-    buyButton.className = 'buy-btn btn px-4 fw-bold'
-    buyButton.innerHTML = 'Order <i class="fa-solid fa-plus"></i>'
+    buyButton.className = 'buy-btn btn fw-bold'
+    buyButton.innerHTML = '<i class="fa-solid fa-cart-plus"></i>'
 
     price.className = 'price m-0 shadow-lg d-flex justify-content-center align-items-center'
     price.textContent = `₱ ${itemPrice}`
@@ -87,22 +90,43 @@ export default function product() {
     productBody.className = 'product-body my-4 d-flex justify-content-center align-items-center'
     productBody.appendChild(createProductCard(
         item1,
-        'Plain',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Laccha Paratha',
+        'Lachha Paratha are crispy flaky layered whole wheat flatbreads made with a simple unleavened dough consisting of whole wheat flour, salt and ghee or oil. ',
         '65.00'
     ))
 
     productBody.appendChild(createProductCard(
         item2,
-        'Plain',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Makki ki Roti',
+        'A winter favorite, makki ki roti is made with maize flour or makki atta, also called cornmeal and is very distinctly an eponymous fit as well.',
         '65.00'
     ))
 
     productBody.appendChild(createProductCard(
         item3,
-        'Plain',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Naan',
+        'Naan roti is made from wheat flour and typically cooked in a tandoor oven, resulting in a soft and slightly leavened bread with a slightly charred exterior.',
+        '65.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item4,
+        'Tandoori',
+        'Tandoori roti is a type of Indian flatbread made from wheat flour and cooked in a tandoor oven, giving it a distinct smoky flavor and slightly charred texture.',
+        '65.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item5,
+        'Aloo Paratha',
+        'Aloo paratha is an Indian stuffed flatbread made from wheat flour and filled with a spiced potato mixture, typically pan-fried with ghee or oil until golden brown.',
+        '65.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item6,
+        'Roghni Naan',
+        'Roghni naan is made from wheat flour, enriched with yogurt and ghee, and cooked in a tandoor oven, resulting in a soft, buttery, and slightly crispy bread.',
         '65.00'
     ))
 
