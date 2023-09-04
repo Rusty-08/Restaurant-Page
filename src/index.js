@@ -70,7 +70,7 @@ window.onload = () => {
     const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
     sections.forEach(section => section.classList.add('d-none'))
-    document.getElementById('Home')
+    document.getElementById('About')
         .classList.remove('d-none')
 
     links.classList.add('active')

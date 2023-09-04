@@ -42,8 +42,8 @@ const addAccounts = () => {
     const tiktok = document.createElement('i')
 
     container.className = 'home-accounts d-flex gap-4'
-    facebook.className = 'fa-brands fa-facebook fs-5'
-    instagram.className = 'fa-brands fa-square-instagram fs-5'
+    facebook.className = 'fa-brands fa-facebook-f fs-5'
+    instagram.className = 'fa-brands fa-instagram fs-5'
     tiktok.className = 'fa-brands fa-tiktok fs-5'
 
     container.appendChild(facebook)
@@ -58,17 +58,16 @@ const addAccounts = () => {
 export function addFooter() {
     const footer = document.createElement('div')
     const project = document.createElement('p')
-    const wrapper = document.createElement('div')
     const year = document.createElement('p')
     const owner = document.createElement('a')
 
-    project.textContent = 'The Odin Project - Rusty Gunao'
+    project.textContent = 'The Odin Project — Rusty Gunao'
     year.innerHTML = new Date().getFullYear() + ' <i class="fa-regular fa-copyright"></i>'
     owner.setAttribute('href', 'https://github.com/Rusty-08/Restaurant-Page')
     owner.setAttribute('target', '__blank')
     owner.innerHTML = 'Rusty-08 <i class="fa-brands fa-github"></i>'
 
-    footer.className = 'footer shadow-lg w-100 px-5 d-flex justify-content-between align-items-center'
+    footer.className = 'footer w-100 px-5 d-flex justify-content-between align-items-center'
     footer.appendChild(owner)
     footer.appendChild(project)
     footer.appendChild(year)
