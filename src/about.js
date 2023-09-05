@@ -36,19 +36,23 @@ const createSection = (headerContent, bodyContent) => {
 
 const createBodyCard = (iconClass, headerContent, bodyContent) => {
     const container = document.createElement('div')
+    const iconBox = document.createElement('div')
     const icon = document.createElement('i')
     const header = document.createElement('h3')
     const body = document.createElement('p')
     const link = document.createElement('a')
 
     icon.className = iconClass
+    iconBox.className = 'icon-box d-flex justify-content-center align-items-center'
+    iconBox.appendChild(icon)
+
     header.textContent = headerContent
     body.textContent = bodyContent
     link.setAttribute('href', '#')
     link.innerHTML = 'Learn More <i class="fa-solid fa-arrow-right"></i>'
 
-    container.className = 'about-body-content d-flex flex-column align-items-flex-start my-4 px-4'
-    container.appendChild(icon)
+    container.className = 'about-body-content w-100 d-flex flex-column align-items-flex-start my-3'
+    container.appendChild(iconBox)
     container.appendChild(header)
     container.appendChild(body)
     container.appendChild(link)
@@ -61,6 +65,7 @@ export default function about() {
     const AboutJourney = document.createElement('div')
     const headerImage = document.createElement('img')
     const AboutBody = document.createElement('div')
+    const wrapper = document.createElement('div')
     const bodyImage = document.createElement('img')
 
     about.setAttribute('id', 'About')
@@ -80,16 +85,30 @@ export default function about() {
         "Our Roti is more than just a flatbread; it's a labor of love. We handcraft each Roti with precision and care, using only the finest ingredients. The result? A Roti that's soft, flavorful, and healthy – the perfect accompaniment to a cup of our aromatic tea."
     ))
 
-    bodyImage.className = 'about-body-pic w-50'
+    bodyImage.className = 'about-body-pic'
     bodyImage.src = bodyPicture
 
-    AboutBody.className = 'about-body d-flex justify-content-flex-start align-items-center pb-5'
-    AboutBody.appendChild(bodyImage)
-    AboutBody.appendChild(createBodyCard(
+    AboutBody.className = 'about-body w-100 h-auto d-flex justify-content-center align-items-center pb-5 pt-4'
+
+    wrapper.className = 'about-wrapper d-flex justify-content-flex-start flex-column align-items-center'
+    wrapper.appendChild(createBodyCard(
         'fa-solid fa-hand-fist icon',
         'Our Commitment',
         "At Roti Hub, we're committed to sustainability and responsible sourcing. We work closely with local farmers and suppliers to ensure that our ingredients are of the highest quality and sourced ethically."
     ))
+    wrapper.appendChild(createBodyCard(
+        'fa-solid fa-mug-hot icon',
+        'The Tea Connection',
+        "Tea, an integral part of our culture, is at the heart of our menu. We've curated a selection of teas from around the world to complement our Roti offerings. From soothing herbal infusions to robust black teas, there's a tea for every palate."
+    ))
+    wrapper.appendChild(createBodyCard(
+        'fa-regular fa-handshake icon',
+        'Join Us',
+        "We invite you to join us on this culinary journey. Whether you're looking for a quick bite or a leisurely meal, Roti Hub is the place to savor the flavors of tradition and innovation."
+    ))
+
+    AboutBody.appendChild(bodyImage)
+    AboutBody.appendChild(wrapper)
 
     about.appendChild(headerImage)
     about.appendChild(createHeader())
