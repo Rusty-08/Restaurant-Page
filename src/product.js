@@ -39,12 +39,12 @@ const createProductCard = (pic, title, description, itemPrice) => {
     image.setAttribute('alt', 'picture')
     image.src = pic
 
-    name.className = 'food-name fw-bold'
+    name.className = 'food-name'
     name.textContent = title
-    desc.className = 'food-desc text-center fw-bold'
+    desc.className = 'food-desc text-center'
     desc.textContent = description
 
-    buyButton.className = 'buy-btn btn fw-bold'
+    buyButton.className = 'buy-btn btn'
     buyButton.innerHTML = '<i class="fa-solid fa-cart-plus"></i>'
 
     price.className = 'price m-0 shadow-lg d-flex justify-content-center align-items-center'

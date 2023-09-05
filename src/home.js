@@ -60,6 +60,10 @@ export function addFooter() {
     const project = document.createElement('p')
     const year = document.createElement('p')
     const owner = document.createElement('a')
+    const accounts = document.createElement('div')
+    const facebook = document.createElement('i')
+    const linkin = document.createElement('i')
+    const github = document.createElement('i')
 
     project.textContent = 'The Odin Project — Rusty Gunao'
     year.innerHTML = new Date().getFullYear() + ' <i class="fa-regular fa-copyright"></i>'
@@ -67,10 +71,20 @@ export function addFooter() {
     owner.setAttribute('target', '__blank')
     owner.innerHTML = 'Rusty-08 <i class="fa-brands fa-github"></i>'
 
-    footer.className = 'footer w-100 px-5 d-flex justify-content-between align-items-center'
-    footer.appendChild(owner)
+    accounts.className = 'footer-accounts d-flex align-items-center'
+    facebook.className = 'fa-brands fa-facebook-f'
+    linkin.className = 'fa-brands fa-linkedin-in'
+    github.className = 'fa-brands fa-github'
+
+    accounts.appendChild(facebook)
+    accounts.appendChild(linkin)
+    accounts.appendChild(github)
+    accounts.appendChild(year)
+
+    footer.className = 'footer w-100 py-4 d-flex justify-content-center align-items-center flex-column gap-3'
     footer.appendChild(project)
-    footer.appendChild(year)
+    footer.appendChild(owner)
+    footer.appendChild(accounts)
 
     return footer
 }

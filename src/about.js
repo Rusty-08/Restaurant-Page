@@ -7,7 +7,7 @@ const createHeader = () => {
     const title = document.createElement('h1')
     const subTitle = document.createElement('span')
 
-    container.className = 'about-title text-center mt-4'
+    container.className = 'about-title text-center mt-5'
     welcome.textContent = 'WELCOME'
     title.textContent = 'The Roti Hub'
     subTitle.textContent = "At Roti Hub, we're passionate about serving you the finest and healthiest Roti and Tea combinations. Our story is one of culinary exploration and a deep-rooted commitment to offering you a delightful dining experience."
@@ -60,13 +60,33 @@ const createBodyCard = (iconClass, headerContent, bodyContent) => {
     return container
 }
 
+const createTestimonial = () => {
+    const wrapper = document.createElement('div')
+    const bodyText = document.createElement('p');
+    const author = document.createElement('p');
+    const occupation = document.createElement('span');
+
+    bodyText.textContent = "'I can't express how much I love Roti Hub! The moment I walked in, I was greeted by the warm aroma of freshly baked Roti. The taste? Absolutely divine! The Roti is soft, and the tea is the perfect pairing. It's become my go-to spot for a quick and delicious meal. The staff is friendly and welcoming, making every visit a delightful experience. I can't recommend Roti Hub enough!'"
+    author.textContent = 'CARDO DALISAY'
+    occupation.textContent = 'Professional Artists'
+
+    wrapper.appendChild(bodyText)
+    wrapper.appendChild(author)
+    wrapper.appendChild(occupation)
+    wrapper.className = 'testimony card d-flex justify-content-center align-items-center flex-column'
+
+    return wrapper
+}
+
 export default function about() {
     const about = document.createElement('section');
     const AboutJourney = document.createElement('div')
     const headerImage = document.createElement('img')
     const AboutBody = document.createElement('div')
     const wrapper = document.createElement('div')
+    const image = document.createElement('div')
     const bodyImage = document.createElement('img')
+    const testimonySection = document.createElement('div')
 
     about.setAttribute('id', 'About')
     about.className = 'd-flex w-100 min-vh-100 position-relative justify-content-flex-start align-items-center flex-column'
@@ -74,7 +94,7 @@ export default function about() {
     headerImage.className = 'about-header-pic position-absolute shadow-lg'
     headerImage.src = headerPicture
 
-    AboutJourney.className = 'about-journey d-flex my-5 justify-content-center'
+    AboutJourney.className = 'about-journey d-flex my-5 mt-4 justify-content-center'
 
     AboutJourney.appendChild(createSection(
         'Our Journey',
@@ -85,10 +105,11 @@ export default function about() {
         "Our Roti is more than just a flatbread; it's a labor of love. We handcraft each Roti with precision and care, using only the finest ingredients. The result? A Roti that's soft, flavorful, and healthy – the perfect accompaniment to a cup of our aromatic tea."
     ))
 
-    bodyImage.className = 'about-body-pic'
     bodyImage.src = bodyPicture
+    image.className = 'about-body-pic shadow-sm'
+    image.appendChild(bodyImage)
 
-    AboutBody.className = 'about-body w-100 h-auto d-flex justify-content-center align-items-center pb-5 pt-4'
+    AboutBody.className = 'about-body h-auto d-flex justify-content-center align-items-center py-5 pt-4'
 
     wrapper.className = 'about-wrapper d-flex justify-content-flex-start flex-column align-items-center'
     wrapper.appendChild(createBodyCard(
@@ -107,13 +128,17 @@ export default function about() {
         "We invite you to join us on this culinary journey. Whether you're looking for a quick bite or a leisurely meal, Roti Hub is the place to savor the flavors of tradition and innovation."
     ))
 
-    AboutBody.appendChild(bodyImage)
+    AboutBody.appendChild(image)
     AboutBody.appendChild(wrapper)
+
+    testimonySection.className = 'testimony-section d-flex justify-content-center align-items-center my-5'
+    testimonySection.appendChild(createTestimonial())
 
     about.appendChild(headerImage)
     about.appendChild(createHeader())
     about.appendChild(AboutJourney)
     about.appendChild(AboutBody)
+    about.appendChild(testimonySection)
 
     return about
 }
