@@ -1,7 +1,50 @@
 
-// const createForm = () => {
-//     const
-// }
+const createForm = () => {
+    const contactForm = document.createElement('div');
+    const form = document.createElement('form')
+    const header = document.createElement('h5')
+    const desc = document.createElement('p')
+    const name = document.createElement('div')
+    const email = document.createElement('div')
+    const message = document.createElement('div')
+    const submit = document.createElement('button')
+
+    header.textContent = 'Feedback'
+    desc.textContent = 'Share your thoughts with us!'
+
+    name.innerHTML = `
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="name">
+            `
+    email.innerHTML = `
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" class="form-control" id="email">
+            `
+    message.innerHTML = `
+                <label for="text-area" class="form-label">Message</label>
+                <textarea class="form-control" id="text-area" name="message" rows="3" ></textarea>
+            `
+
+    submit.className = 'btn'
+    submit.setAttribute('type', 'submit')
+    submit.textContent = 'Submit'
+
+    form.className = 'form'
+    form.id = 'myForm'
+    form.setAttribute('action', 'https://formspree.io/f/mleyryar')
+    form.setAttribute('method', 'POST')
+    form.appendChild(header)
+    form.appendChild(desc)
+    form.appendChild(name)
+    form.appendChild(email)
+    form.appendChild(message)
+    form.appendChild(submit)
+
+    contactForm.className = 'contact-form'
+    contactForm.appendChild(form)
+
+    return contactForm
+}
 
 export default function contact() {
     const contact = document.createElement('section')
@@ -12,7 +55,7 @@ export default function contact() {
     const phone = document.createElement('p')
 
     contact.setAttribute('id', 'Contact')
-    contact.className = 'd-flex w-100 h-100 justify-content-center align-items-center'
+    contact.className = 'd-flex w-100 min-vh-100 justify-content-center align-items-center'
 
     map.className = 'map shadow-sm d-flex position-relative'
     map.innerHTML = `<iframe 
@@ -32,8 +75,9 @@ export default function contact() {
 
     map.appendChild(contactDetail)
 
-    container.className = 'contact-wrapper d-flex w-100 justify-content-evenly align-items-center gap-3'
+    container.className = 'contact-wrapper d-flex w-100 justify-content-evenly align-items-center'
     container.appendChild(map)
+    container.appendChild(createForm())
 
     contact.appendChild(container)
 

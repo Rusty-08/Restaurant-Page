@@ -63,6 +63,19 @@ const orderNumber = () => {
 
 orderNumber()
 
+// * Reset inputted data in contact form after submission
+const resetContactForm = () => {
+    document.getElementById("myForm")
+        .addEventListener("submit", () => {
+            setTimeout(function () {
+                document.getElementById("myForm").reset()
+            }, 2000)
+        })
+}
+
+resetContactForm()
+
+
 // * Set Home section as active page onload
 
 window.onload = () => {
@@ -70,7 +83,7 @@ window.onload = () => {
     const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
     sections.forEach(section => section.classList.add('d-none'))
-    document.getElementById('Contact')
+    document.getElementById('Home')
         .classList.remove('d-none')
 
     links.classList.add('active')
