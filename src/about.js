@@ -94,7 +94,7 @@ export default function about() {
     headerImage.className = 'about-header-pic position-absolute shadow-lg'
     headerImage.src = headerPicture
 
-    AboutJourney.className = 'about-journey d-flex my-5 mt-4 justify-content-center'
+    AboutJourney.className = 'about-journey d-flex my-5 justify-content-center'
 
     AboutJourney.appendChild(createSection(
         'Our Journey',
@@ -106,7 +106,7 @@ export default function about() {
     ))
 
     bodyImage.src = bodyPicture
-    image.className = 'about-body-pic shadow-sm'
+    image.className = 'about-body-pic shadow-lg'
     image.appendChild(bodyImage)
 
     AboutBody.className = 'about-body h-auto d-flex justify-content-center align-items-center py-5 pt-4'
