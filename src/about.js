@@ -66,7 +66,7 @@ const createTestimonial = () => {
     const author = document.createElement('p');
     const occupation = document.createElement('span');
 
-    bodyText.textContent = "'I can't express how much I love Roti Hub! The moment I walked in, I was greeted by the warm aroma of freshly baked Roti. The taste? Absolutely divine! The Roti is soft, and the tea is the perfect pairing. It's become my go-to spot for a quick and delicious meal. The staff is friendly and welcoming, making every visit a delightful experience. I can't recommend Roti Hub enough!'"
+    bodyText.textContent = `"I can't express how much I love Roti Hub! The moment I walked in, I was greeted by the warm aroma of freshly baked Roti. The taste? Absolutely divine! The Roti is soft, and the tea is the perfect pairing. It's become my go-to spot for a quick and delicious meal. The staff is friendly and welcoming, making every visit a delightful experience. I can't recommend Roti Hub enough!"`
     author.textContent = 'CARDO DALISAY'
     occupation.textContent = 'Professional Artists'
 

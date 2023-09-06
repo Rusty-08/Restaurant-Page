@@ -75,16 +75,28 @@ const resetContactForm = () => {
 
 resetContactForm()
 
-
 // * Set Home section as active page onload
 
 window.onload = () => {
-    const links = document.querySelector('.nav-item:first-child .nav-link')
+    const navlinks = document.querySelectorAll('.nav-link')
+    const home = document.querySelector('.nav-item:first-child .nav-link')
     const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
-    sections.forEach(section => section.classList.add('d-none'))
-    document.getElementById('Home')
-        .classList.remove('d-none')
+    const savedActivePage = localStorage.getItem('activePage');
 
-    links.classList.add('active')
+    let activeLink = [...navlinks].find(link => link.textContent == savedActivePage)
+
+    if (savedActivePage) {
+        sections.forEach(section => section.classList.add('d-none'))
+        document.getElementById(`${savedActivePage}`)
+            .classList.remove('d-none')
+
+        activeLink.classList.add('active')
+    } else {
+        sections.forEach(section => section.classList.add('d-none'))
+        document.getElementById('Home')
+            .classList.remove('d-none')
+
+        home.classList.add('active')
+    }
 }

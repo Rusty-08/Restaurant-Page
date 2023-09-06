@@ -14,15 +14,31 @@
     height: 100dvh;
 }
 
+/* NAVBAR */
+
 .navbar {
     background-color: #37160B;
     height: 5rem;
 }
 
-.logo {
-    height: 3rem;
+.navbar i {
+    font-size: 2rem;
+}
+
+.navbar .logo {
     position: absolute;
     left: 1rem;
+    color: #ffcac5;
+}
+
+.logo h2 {
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    color: #EADBC8;
+    font-family: 'Italiana';
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 .nav-item {
@@ -90,6 +106,8 @@
     background-color: rgba(248, 240, 229, 0.7);
     padding-top: 5rem;
 }
+
+/* HOME */
 
 .homeDesc {
     margin-left: 4rem;
@@ -166,6 +184,8 @@
     color: rgba(109, 28, 21, 1);
     cursor: pointer;
 }
+
+/* PRODUCTS */
 
 .products-header h1 {
     color: rgb(109, 28, 21);
@@ -287,6 +307,8 @@
     background-color: rgba(109, 28, 21, 0.2) !important;
     border-color: transparent !important;
 }
+
+/* ABOUT */
 
 .about-title {
     width: 60%;
@@ -468,6 +490,8 @@
     left: calc(50% - 1.5rem);
 }
 
+/* CONTACT */
+
 .contact-wrapper {
     height: calc(100vh - 5rem) !important;
 }
@@ -547,45 +571,18 @@
     background-color: transparent !important;
 }
 
-
-
-
 /* FOOTER */
 
 .footer {
     height: auto;
     background-color: rgba(248, 240, 229, 0.7);
-    border-top: 1px solid rgba(120, 109, 108, 0.3);
+    border-top: 1px solid rgba(120, 109, 108, 0.2);
 }
 
 .footer p, .footer i, .footer a {
     margin: 0 !important;
     color: rgb(109, 28, 21);
     text-decoration: none;
-}
-
-.footer i {
-    font-size: 1rem;
-}
-
-.footer-accounts i {
-    font-size: 1.2rem;
-    padding: 1rem;
-    border-radius: 50%;
-    opacity: 0.7;
-}
-
-.footer-accounts i:first-child {
-    padding: 1rem 1.25rem;
-}
-
-.footer-accounts i:nth-child(2) {
-    padding: 1rem 1.1rem;
-}
-
-.footer-accounts i:last-child {
-    padding: 0;
-    font-size: 0.9rem;
 }
 
 .footer-accounts p {
@@ -597,10 +594,45 @@
 .footer a {
     padding: 0.5rem 1.5rem;
     opacity: 0.8;
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
 .footer a:hover,
 .footer-accounts i:hover {
     background-color: rgb(239, 230, 218);
     opacity: 1;
+}
+
+.footer i {
+    font-size: 1rem !important;
+}
+
+.footer-accounts a {
+    border-radius: 50%;
+    opacity: 0.7;
+    margin: 0 !important;
+    padding: 1rem;
+    line-height: 0;
+}
+
+.footer-accounts a:first-child {
+    padding: 1rem 1.25rem;
+}
+
+.footer-accounts a:nth-child(2) {
+    padding: 1rem 1.1rem;
+}
+
+.footer-accounts i {
+    font-size: 1.2rem !important;
+}
+
+.footer-accounts p i {
+    padding: 0;
+    font-size: 0.9rem !important;
+}
+
+.footer-accounts p i:hover {
+    background-color: transparent !important;
 }

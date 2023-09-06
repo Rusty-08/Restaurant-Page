@@ -1,5 +1,3 @@
-import logo from './img/new-logo.png';
-
 export function setActiveLink() {
     const project = document.querySelector('.nav-item:nth-child(2) .nav-link');
     const navlink = document.querySelectorAll(['.nav-link', '.product-btn'])
@@ -23,6 +21,8 @@ export function setActiveLink() {
             if (linkHref == projectBtn) {
                 project.classList.add('active')
             }
+
+            localStorage.setItem('activePage', activeLink)
         })
     })
 }
@@ -31,7 +31,7 @@ export default function navigation() {
     const container = document.createElement('div');
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
-    const headerLogo = document.createElement('img');
+    const name = document.createElement('div');
 
     container.className = 'container-fluid position-relative d-flex justify-content-center';
     nav.className = 'navbar fixed-top px-4'
@@ -42,11 +42,13 @@ export default function navigation() {
     ul.appendChild(createNav('About'))
     ul.appendChild(createNav('Contact'))
 
-    headerLogo.setAttribute('alt', 'logo')
-    headerLogo.className = 'logo'
-    headerLogo.src = logo;
+    name.className = 'logo d-flex justify-content-center align-items-center gap-2'
+    name.innerHTML = `
+                <i class="fa-solid fa-stroopwafel"></i> 
+                <h2>ROTI</h2>
+            `
 
-    container.appendChild(headerLogo)
+    container.appendChild(name)
     container.appendChild(ul)
 
     nav.appendChild(container)

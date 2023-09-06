@@ -65,8 +65,8 @@ export default function contact() {
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>`
 
-    email.innerHTML = 'Email <br><span><a href="mailto:example@gmail.com">example@gmail.com</a></span>'
-    phone.innerHTML = 'Phone <br><span>(+63) 012 345 6789</span>'
+    email.innerHTML = 'Email <br><span><a href="mailto:gunaorusty@gmail.com">gunaorusty@gmail.com</a></span>'
+    phone.innerHTML = 'Phone <br><span>(+63) 995 201 6228</span>'
 
     contactDetail.className = 'contact-detail position-absolute d-flex gap-5 align-items-center justify-content-center px-5 py-4 shadow-sm'
 

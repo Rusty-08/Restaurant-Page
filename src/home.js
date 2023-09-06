@@ -61,9 +61,9 @@ export function addFooter() {
     const year = document.createElement('p')
     const owner = document.createElement('a')
     const accounts = document.createElement('div')
-    const facebook = document.createElement('i')
-    const linkin = document.createElement('i')
-    const github = document.createElement('i')
+    const facebook = document.createElement('a')
+    const linkin = document.createElement('a')
+    const github = document.createElement('a')
 
     project.textContent = 'The Odin Project — Rusty Gunao'
     year.innerHTML = new Date().getFullYear() + ' <i class="fa-regular fa-copyright"></i>'
@@ -72,21 +72,40 @@ export function addFooter() {
     owner.innerHTML = 'Rusty-08 <i class="fa-brands fa-github"></i>'
 
     accounts.className = 'footer-accounts d-flex align-items-center'
-    facebook.className = 'fa-brands fa-facebook-f'
-    linkin.className = 'fa-brands fa-linkedin-in'
-    github.className = 'fa-brands fa-github'
+
+    facebook.setAttribute('target', '__blank')
+    facebook.setAttribute('href', 'https://www.facebook.com/gunaorusty')
+    facebook.innerHTML = `<i class="fa-brands fa-facebook-f"></i>`
+
+    linkin.setAttribute('target', '__blank')
+    linkin.setAttribute('href', 'www.linkedin.com/in/gunaorusty')
+    linkin.innerHTML = `<i class="fa-brands fa-linkedin-in"></i>`
+
+    github.setAttribute('target', '__blank')
+    github.setAttribute('href', 'https://github.com/Rusty-08')
+    github.innerHTML = `<i class="fa-brands fa-github"></i>`
 
     accounts.appendChild(facebook)
     accounts.appendChild(linkin)
     accounts.appendChild(github)
     accounts.appendChild(year)
 
-    footer.className = 'footer w-100 py-4 d-flex justify-content-center align-items-center flex-column gap-3'
+    footer.className = 'footer w-100 pt-4 pb-2 d-flex justify-content-center align-items-center flex-column'
     footer.appendChild(project)
     footer.appendChild(owner)
     footer.appendChild(accounts)
 
     return footer
+}
+
+const createImage = (className, image) => {
+    const product = document.createElement('img')
+
+    product.setAttribute('alt', 'picture')
+    product.className = className
+    product.src = image;
+
+    return product
 }
 
 export default function home() {
@@ -115,14 +134,4 @@ export default function home() {
     home.appendChild(homeProduct)
 
     return home
-}
-
-const createImage = (className, image) => {
-    const product = document.createElement('img')
-
-    product.setAttribute('alt', 'picture')
-    product.className = className
-    product.src = image;
-
-    return product
 }
