@@ -40,9 +40,9 @@ const orderNumber = () => {
     const minusButtons = document.querySelectorAll('.minus')
     const plusButtons = document.querySelectorAll('.plus')
 
-    orderNumberElements.forEach(number => number.textContent = 0)
+    orderNumberElements.forEach(number => number.textContent = 1)
 
-    const orderNumbers = new Array(orderNumberElements.length).fill(0)
+    const orderNumbers = new Array(orderNumberElements.length).fill(1)
 
     minusButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
@@ -64,6 +64,7 @@ const orderNumber = () => {
 orderNumber()
 
 // * Reset inputted data in contact form after submission
+
 const resetContactForm = () => {
     document.getElementById("myForm")
         .addEventListener("submit", () => {
@@ -82,13 +83,13 @@ window.onload = () => {
     const home = document.querySelector('.nav-item:first-child .nav-link')
     const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
 
-    const savedActivePage = localStorage.getItem('activePage');
+    const activePage = sessionStorage.getItem('activePage');
 
-    let activeLink = [...navlinks].find(link => link.textContent == savedActivePage)
+    let activeLink = [...navlinks].find(link => link.textContent == activePage)
 
-    if (savedActivePage) {
+    if (activePage) {
         sections.forEach(section => section.classList.add('d-none'))
-        document.getElementById(`${savedActivePage}`)
+        document.getElementById(`${activePage}`)
             .classList.remove('d-none')
 
         activeLink.classList.add('active')

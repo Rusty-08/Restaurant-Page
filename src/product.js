@@ -4,6 +4,12 @@ import item3 from './img/product-1.png';
 import item4 from './img/Tandoori.png';
 import item5 from './img/Alo.png';
 import item6 from './img/Roghni.png';
+import item7 from './img/tea-1.png';
+import item8 from './img/tea-2.png';
+import item9 from './img/tea-6.png';
+import item10 from './img/tea-3.png';
+import item11 from './img/tea-4.png';
+import item12 from './img/tea-5.png';
 
 const addProductsHeader = () => {
     const title = document.createElement('div');
@@ -34,7 +40,7 @@ const createProductCard = (pic, title, description, itemPrice) => {
     const plusBtn = document.createElement('button')
     const price = document.createElement('p')
 
-    item.className = 'product-card card p-3 shadow-lg'
+    item.className = 'product-card card p-3 shadow-sm'
 
     image.setAttribute('alt', 'picture')
     image.src = pic
@@ -128,6 +134,48 @@ export default function product() {
         'Roghni Naan',
         'Roghni naan is made from wheat flour, enriched with yogurt and ghee, and cooked in a tandoor oven, resulting in a soft, buttery, and slightly crispy bread.',
         '65.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item7,
+        'Lemon Ginger Tea',
+        'Lemon ginger tea is a soothing beverage made by steeping fresh ginger and lemon in hot water, known for its refreshing and comforting qualities.',
+        '30.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item8,
+        'Lemon Tea',
+        'Lemon tea is a refreshing beverage made by infusing hot water with the bright, zesty flavor of fresh lemon, offering a tangy and invigorating drink.',
+        '30.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item9,
+        'Coffee',
+        'Hot coffee is a beloved and energizing beverage prepared by brewing roasted coffee beans with hot water, offering a rich and aromatic pick-me-up.',
+        '15.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item10,
+        'Lemonade Iced Tea',
+        'Lemonade iced tea is a delightful and thirst-quenching drink made by combining lemonade and chilled tea, creating a sweet-tart and refreshing fusion.',
+        '45.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item11,
+        'Milk Tea with Peanut',
+        'Milk tea with peanut butter is a unique and creamy beverage that combines the richness of milk tea with the nutty and savory notes of peanut butter, offering a comforting and indulgent treat.',
+        '45.00'
+    ))
+
+    productBody.appendChild(createProductCard(
+        item12,
+        'Iced Tea',
+        'Iced tea is a refreshing cold beverage made by chilling brewed tea, typically served with ice cubes and optional sweeteners or citrus, providing a cool and revitalizing drink.',
+        '25.00'
     ))
 
     product.appendChild(productBody)
