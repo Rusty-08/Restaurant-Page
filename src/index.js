@@ -76,6 +76,19 @@ const resetContactForm = () => {
 
 resetContactForm()
 
+// * hamburger onclick event
+
+const colapseHamburger = () => {
+    const hamburger = document.querySelector('.hamburger')
+    const nav = document.querySelector('.nav')
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle('display')
+        hamburger.classList.toggle('active')
+    })
+}
+
+colapseHamburger()
+
 // * Set Home section as active page onload
 
 window.onload = () => {

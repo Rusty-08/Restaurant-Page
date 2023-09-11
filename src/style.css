@@ -33,7 +33,6 @@
 
 .logo h2 {
     font-weight: bold;
-    font-style: italic;
     margin: 0;
     color: #EADBC8;
     font-family: 'Italiana';
@@ -98,6 +97,23 @@
     width: 80%;
     left: 10%;
 }
+
+.hamburger {
+    right: 0;
+    display: none !important;
+}
+
+.hamburger i {
+    font-size: 2.2rem;
+    color: #EADBC8;
+}
+
+.hamburger:active {
+    border-color: transparent !important;
+    transform: scale(0.95);
+}
+
+/* MAIN BODY */
 
 #Home,
 #Products,
@@ -644,4 +660,55 @@
 
 .footer-accounts p i:hover {
     background-color: transparent !important;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1000px) {
+    .homeDesc {
+        margin-left: 0;
+        width: auto;
+    }
+    .home-title h1 {
+       border: none;
+       font-size: 3rem;
+       margin: 0;
+    }
+    .home-accounts i {
+        font-size: 1.5rem !important;
+    }
+
+    /* navbar - mobile */
+
+    .nav {
+        position: absolute;
+        background-color: #37160B !important;
+        top: 2.5rem;
+        height: 0;
+        overflow: hidden;
+        width: 100vw;
+        margin: 0;
+        transition: height 0.375s ease-in-out;
+    }
+
+    .navbar .display {
+        height: calc(100vh - 5rem);
+    }
+
+    .hamburger {
+        display: block !important;
+    }
+
+    .hamburger.active i {
+        color: #ffc3c3 !important;
+    }
+
+    .navbar .hamburger.active {
+        border-color: rgba(255, 195, 195, 0.3) !important;
+    }
+
+    .nav-item:last-child {
+        position: relative;
+    }
 }

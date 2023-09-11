@@ -22,11 +22,12 @@ const addButtons = () => {
     const productLink = document.createElement('a')
     const orderLink = document.createElement('a')
 
-    container.className = 'home-buttons d-flex gap-2 mt-3'
+    container.className = 'home-buttons d-flex gap-2 mt-3 flex-lg-row flex-column'
     productLink.className = 'product-btn'
     productLink.textContent = 'Our products'
     productLink.setAttribute('href', '#Products')
 
+    orderLink.className = 'text-center'
     orderLink.textContent = 'Order now!'
 
     container.appendChild(productLink)
@@ -126,7 +127,7 @@ export default function home() {
     pics.appendChild(createImage('home-product-2', productSample2))
     pics.appendChild(createImage('home-product-3', productSample3))
 
-    homeProduct.className = 'image-container d-flex justify-content-center align-items-center gap-2 shadow-lg'
+    homeProduct.className = 'image-container d-lg-flex justify-content-center align-items-center gap-2 shadow-lg d-none'
     homeProduct.appendChild(pics)
     homeProduct.appendChild(createImage('home-product-1', productSample1))
 

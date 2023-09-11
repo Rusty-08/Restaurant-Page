@@ -3,6 +3,8 @@ export function setActiveLink() {
     const home = document.querySelector('.nav-item:nth-child(1) .nav-link');
     const navlink = document.querySelectorAll(['.nav-link', '.logo', '.product-btn'])
     const sections = document.querySelectorAll(['#Home', '#About', '#Products', '#Contact'])
+    const hamburger = document.querySelector('.hamburger')
+    const nav = document.querySelector('.nav')
 
     navlink.forEach(link => {
         link.addEventListener('click', () => {
@@ -25,6 +27,9 @@ export function setActiveLink() {
                 home.classList.add('active')
             }
 
+            nav.classList.remove('display')
+            hamburger.classList.remove('active')
+
             sessionStorage.setItem('activePage', activeLink)
         })
     })
@@ -35,10 +40,14 @@ export default function navigation() {
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
     const name = document.createElement('a');
+    const hamburger = document.createElement('button')
+
+    hamburger.className = 'hamburger btn position-absolute'
+    hamburger.innerHTML = `<i class="fa-solid fa-burger"></i>`
 
     container.className = 'container-fluid position-relative d-flex justify-content-center';
-    nav.className = 'navbar fixed-top px-4'
-    ul.className = 'nav gap-4'
+    nav.className = 'navbar fixed-top px-2'
+    ul.className = 'nav gap-4 d-lg-flex flex-lg-row flex-column align-items-center justify-content-center'
 
     ul.appendChild(createNav('Home'))
     ul.appendChild(createNav('Products'))
@@ -54,6 +63,7 @@ export default function navigation() {
 
     container.appendChild(name)
     container.appendChild(ul)
+    container.appendChild(hamburger)
 
     nav.appendChild(container)
 
