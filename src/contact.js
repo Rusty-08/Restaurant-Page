@@ -68,14 +68,14 @@ export default function contact() {
     email.innerHTML = 'Email <br><span><a href="mailto:gunaorusty@gmail.com">gunaorusty@gmail.com</a></span>'
     phone.innerHTML = 'Phone <br><span>(+63) 995 201 6228</span>'
 
-    contactDetail.className = 'contact-detail position-absolute d-flex gap-5 align-items-center justify-content-center px-5 py-4 shadow-sm'
+    contactDetail.className = 'contact-detail position-absolute d-flex gap-lg-5 gap-4 align-items-lg-center align-items-start justify-content-center px-5 py-4 shadow-sm flex-lg-row flex-column'
 
     contactDetail.appendChild(email)
     contactDetail.appendChild(phone)
 
     map.appendChild(contactDetail)
 
-    container.className = 'contact-wrapper d-flex w-100 justify-content-evenly align-items-center'
+    container.className = 'contact-wrapper d-flex w-100 h-100 justify-content-evenly align-items-center flex-lg-row flex-column gap-lg-0 gap-5 my-lg-0 my-5'
     container.appendChild(map)
     container.appendChild(createForm())
 

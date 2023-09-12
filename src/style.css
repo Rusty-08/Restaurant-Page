@@ -666,20 +666,8 @@
 /* MEDIA QUERY */
 
 @media screen and (max-width: 1000px) {
-    .homeDesc {
-        margin-left: 0;
-        width: auto;
-    }
-    .home-title h1 {
-       border: none;
-       font-size: 3rem;
-       margin: 0;
-    }
-    .home-accounts i {
-        font-size: 1.5rem !important;
-    }
 
-    /* navbar - mobile */
+    /* NAVBAR MOBILE */
 
     .nav {
         position: absolute;
@@ -691,24 +679,113 @@
         margin: 0;
         transition: height 0.375s ease-in-out;
     }
-
+    
     .navbar .display {
         height: calc(100vh - 5rem);
     }
-
+    
     .hamburger {
         display: block !important;
     }
-
+    
     .hamburger.active i {
         color: #ffc3c3 !important;
     }
-
+    
     .navbar .hamburger.active {
         border-color: rgba(255, 195, 195, 0.3) !important;
     }
-
+    
     .nav-item:last-child {
         position: relative;
+    }
+
+    /* HOME SECTION */
+
+    .homeDesc {
+        margin-left: 0;
+        width: auto;
+    }
+
+    .home-title h1 {
+       border: none;
+       font-size: 3rem;
+       margin: 0;
+    }
+
+    .home-accounts i {
+        font-size: 1.5rem !important;
+    }
+
+    /* PRODUCTS SECTION */
+
+    .products-header h1 {
+        font-size: 1.7rem;
+    }
+
+    /* ABOUT SECTION */
+
+    .about-title {
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-top: 1.5rem !important;
+        background-color: rgba(217, 212, 205, 0.3) !important;
+    }
+
+    .about-journey {
+        width: 90%;
+        gap: 1rem;
+    }
+    
+    .about-content, .about-wrapper {
+        width: 100%;
+    }
+    
+    .about-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .about-body {
+        width: 90%;
+    }
+
+    .about-body-content {
+        padding: 0 1rem;
+    }
+
+    .testimony {
+        width: 90%;
+        padding: 5rem 1rem 1rem 1rem;
+    }
+
+    .testimony p:first-child {
+        font-size: 0.9rem;
+    }
+
+    /* CONTACT PAGE */
+
+    .map {
+        width: 90%;
+        height: 20rem;
+        margin-bottom: 13rem;
+    }
+
+    .contact-detail {
+        height: 12rem;
+        width: 100%;
+        left: 0;
+        bottom: -14rem;
+        background-color: rgba(217, 212, 205, 0.3);
+    }
+
+    .contact-form {
+        width: 90%;
+        border: 1px dotted rgb(161, 154, 144);
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
     }
 }

@@ -27,7 +27,7 @@ const createSection = (headerContent, bodyContent) => {
     header.textContent = headerContent
     body.textContent = bodyContent
 
-    container.className = 'about-content shadow-lg d-flex flex-column align-items-flex-start p-4'
+    container.className = 'about-content shadow-sm d-flex flex-column align-items-flex-start p-4'
     container.appendChild(header)
     container.appendChild(body)
 
@@ -91,10 +91,10 @@ export default function about() {
     about.setAttribute('id', 'About')
     about.className = 'd-flex w-100 min-vh-100 position-relative justify-content-flex-start align-items-center flex-column'
 
-    headerImage.className = 'about-header-pic position-absolute shadow-lg'
+    headerImage.className = 'about-header-pic position-absolute shadow-lg d-lg-block d-none'
     headerImage.src = headerPicture
 
-    AboutJourney.className = 'about-journey d-flex my-5 justify-content-center'
+    AboutJourney.className = 'about-journey d-flex my-5 justify-content-center flex-lg-row flex-column'
 
     AboutJourney.appendChild(createSection(
         'Our Journey',
@@ -106,7 +106,7 @@ export default function about() {
     ))
 
     bodyImage.src = bodyPicture
-    image.className = 'about-body-pic shadow-lg'
+    image.className = 'about-body-pic shadow-lg d-lg-block d-none'
     image.appendChild(bodyImage)
 
     AboutBody.className = 'about-body h-auto d-flex justify-content-center align-items-center py-5 pt-4'
